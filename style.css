@@ -1,0 +1,478 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #e80c0c;
+  background-size: 400% 400%;
+  overflow-x: hidden;
+}
+
+
+/*Barra de navegacion general*/
+.header {
+  width: 100%;
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: none;
+  max-height: 15vh;
+}
+
+nav img {
+  width: 150 px;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+.nav-links {
+  text-align: center; 
+}
+
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links ul li {
+  display: inline-block; 
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  margin-left: 10px;
+  text-align: center; 
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  position: right;
+  font-family: 'Silkscreen', sans-serif;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: 0.4s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/*-----hamburguer menu and sidebar-----*/
+.oculto {
+  display: none;
+}
+
+.menuHamburguesa {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background: none;
+  border: none;
+  z-index: 3;
+}
+
+.menuHamburguesa i:hover {
+  color: white;
+}
+
+nav .fa {
+  display: block;
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.cerrar-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  z-index: 2;
+}
+
+.cerrar-menu i:hover {
+  color: white;
+}
+
+
+.boton-nav {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background: none;
+  border: none;
+  z-index: 3;
+
+}
+
+@media (max-width: 700px) {
+  .boton-nav {
+    display: block;
+
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #ab0f0f;
+    backdrop-filter: blur(2rem);
+    height: 100vh;
+    width: 150px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: left;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    padding: 1rem;
+    line-height: 3;
+    text-decoration: none;
+  }
+
+  
+}
+
+.logo {
+  width: 110px; 
+  height: auto; 
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Index-Home*/
+.titleopening {
+  position: relative;
+}
+
+.titleopening h1 {
+  padding: 10px;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "Aoboshi One", serif;
+  font-size: 100px;
+  line-height: 1;
+  color: #fce300;
+  margin: 0 0 0px;
+}
+
+@media only screen and (min-width: 768px) {
+  .titleopening h1 {
+    font-size: 180px; 
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .titleopening h1 {
+    font-size: 250px; 
+  }
+}
+
+
+.titleopening h2 {
+  color: white;
+  padding: 5px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-out;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--Lion statue image intro--*/
+.image-container {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.image-container img {
+  max-width: 100%; 
+  height: auto; 
+  width: 800px;
+}
+
+
+.image-container img {
+  transition: transform 0.3s ease; 
+}
+
+
+.image-container img:hover {
+  transform: scale(1.1); 
+}
+
+
+/*--cities images intro--*/
+.image-container2 {
+  display: flex; 
+  justify-content: space-around;
+  align-items: center; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+
+.image-container2 img {
+  max-width: 100%; 
+  height: auto; 
+  width: 600px;
+  box-shadow: 8px 30px 10px rgba(0, 0, 0, 0.2); 
+  margin-bottom: 20px; 
+}
+
+
+.image-container2 img {
+  transition: transform 0.3s ease; 
+}
+
+
+.image-container2 img:hover {
+  transform: scale(1.1); 
+}
+
+
+@media (max-width: 768px) {
+  .image-container2 {
+    flex-direction: column; 
+    align-items: flex-start; 
+    overflow-x: hidden;
+  }
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--cities 5 images intro--*/
+.image-container5 {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.image-container5 img {
+  max-width: 100%; 
+  height: auto; 
+  box-shadow: 8px 30px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+/*--cities 6 images intro--*/
+.image-container6 {
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+
+.image-container6 img {
+  max-width: 100%;
+  height: auto; 
+  box-shadow: 8px 30px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--texthomeintro--*/
+.texthomeintro {
+  padding: 40px;
+  color: white;
+  text-align: center; 
+  margin-top: 20px; 
+  max-width: 800px; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.texthomeintro p {
+  font-size: 15px; 
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  font-weight: 200;
+  flex-direction: column;
+  
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--text news intro--*/
+.titleopeningnews h1 {
+  font-size: 90px;
+  padding: 1px;
+  color: #fce300;
+  text-align: center; 
+  margin-top: 20px; 
+  max-width: 800px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.titleopeningnews h2 {
+  font-weight: 100px;
+  padding: 15px;
+  color: white;
+  text-align: center; 
+  margin-top: 20px; 
+  max-width: 800px; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.textnews p {
+  font-size: 15px; 
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  font-weight: 200;
+  flex-direction: column;
+  color: white;
+}
+
+.textnews {
+  padding: 40px;
+  color: white;
+  text-align: center; 
+  margin-top: 0px; 
+  max-width: 800px; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+
+blockquote.highlight {
+  font-size: 1.2em; 
+  font-style: italic; 
+  border-left: 5px solid white; 
+  padding-left: 10px; 
+  padding: 30px;
+}
+
+
+
+.image-container-news {
+  text-align: center; 
+  margin-top: 20px; 
+}
+
+.image-container-news img {
+  padding: 5px;
+  max-width: 90%; 
+  height: auto; 
+  box-shadow: 8px 30px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*ABOUT: acerca del blog*/
+.ABOUT {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+
+.textosindex {
+padding: 20px;
+font-family: 'Silkscreen', sans-serif;
+
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*-----footer------*/
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+
+.footer h4 {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: white;
+  padding: 15px;
+}
+
+.footertext {
+color: white;
+font-size: 15px;
+font-family: 'Silkscreen', sans-serif;
+font-weight: 100;
+}
+
+
+
+.icons {
+padding: 20px;
+}
+
+
+.icons iconify-icon:hover {
+  filter: brightness(2);
+  transition: filter 0.3s;
+}
